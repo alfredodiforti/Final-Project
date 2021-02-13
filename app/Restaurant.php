@@ -6,6 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Restaurant extends Model
 {
+    protected $fillable = [
+        'name',
+        'email',
+        'phone',
+        'address',
+        'slug'
+    ];
+
+    //RELATIONS
+
     public function type() {
         return $this->belongsToMany('App\Type');
     }
