@@ -21,5 +21,15 @@ Route::resource('restaurant', 'RestaurantController');
 Auth::routes();
 
 /**ADMIN ROUTE HOME CONTROLLER */
-Route::get('/registeredHome', 'HomeController@index')->name('registeredHome');
+// Route::get('/home', 'HomeController@index')->name('home');
 
+Route::prefix('admin')
+    ->namespace('admin')
+    ->name('admin.')
+    ->middleware('auth')
+    ->group(function() {
+        //home admin
+        Route::get('/', 'HomeController@index')->name('home');
+
+        //rotte post CRUD
+    });
