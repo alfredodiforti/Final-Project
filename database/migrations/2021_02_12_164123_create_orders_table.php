@@ -17,9 +17,10 @@ class CreateOrdersTable extends Migration
             $table->id();
             $table->string('name', 50);
             $table->string('surname', 50);
+            $table->text('address');
             $table->string('email', 80);
-            $table->string('phone' , 10);            
-            $table->boolean('payment_status');           
+            $table->string('phone' , 10);
+            $table->boolean('payment_status');
             $table->timestamps();
         });
     }
