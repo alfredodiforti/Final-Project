@@ -3,11 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Restaurant;
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Auth;
 
-class RestaurantController extends Controller
+class FoodController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,11 +12,8 @@ class RestaurantController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
-        // $owner = Auth::owner();
-        // $id = Auth::id();
-
-        // $restaurants = Restaurant::id();                
+    {
+        //
     }
 
     /**
@@ -29,7 +23,7 @@ class RestaurantController extends Controller
      */
     public function create()
     {
-        
+        //
     }
 
     /**
@@ -51,9 +45,7 @@ class RestaurantController extends Controller
      */
     public function show($id)
     {
-        $restaurant = Restaurant::where('id', $id)->first();
-
-        return view('restaurants.show', compact('restaurant'));
+        //
     }
 
     /**

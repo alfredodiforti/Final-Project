@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
 @section('content')
 <div class="container">
@@ -17,6 +17,10 @@
                     {{ __('You are logged in!') }}
                 </div>
             </div>
+
+            <h1>
+                IL TUO RISTORANTE
+            </h1>
         </div>
     </div>
 </div>
