@@ -16,14 +16,14 @@ class FoodsTableSeeder extends Seeder
     {
             for($i = 0; $i < 10; $i++) {
 
-                // $newMenu = $i+1;
+                $newMenu = $i+1;
 
-                //for($u = 0; $u < 3; $u++){
+                for($u = 0; $u < 3; $u++){
                     $nameFood=$faker->word();
 
                     $newFood = new Food();
 
-                    $newFood->restaurant_id=$i+1;
+                    $newFood->restaurant_id=$newMenu;
                     $newFood->name = $nameFood;
                     $newFood->description = $faker->sentence();
                     $newFood->price = $faker->randomFloat(2,10,30);
@@ -35,7 +35,7 @@ class FoodsTableSeeder extends Seeder
                     $newFood->slug = Str::slug($nameFood , '-');
 
                     $newFood->save();
-                //}
+                }
             }
     }
 }
