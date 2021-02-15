@@ -21,6 +21,7 @@ class CreateFoodsTable extends Migration
             $table->text('photo');
             $table->text('allergenic');
             $table->text('ingredients');
+            $table->boolean('visibility');
             $table->float('price',6,2);
             $table->string('slug', 100);
             $table->timestamps();
