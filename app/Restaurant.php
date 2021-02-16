@@ -19,8 +19,8 @@ class Restaurant extends Model
     public function type() {
         return $this->belongsToMany('App\Type');
     }
-    public function owner() {
-        return $this->hasOne('App\Owner');
+    public function user() {
+        return $this->hasOne('App\User');
     }
     public function food() {
         return $this->hasMany('App\Food');

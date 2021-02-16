@@ -19,8 +19,12 @@
             </div>
 
             <h1>
-                IL TUO RISTORANTE
+                {{-- {{ $restaurant->name }} --}}il tuo risto
             </h1>
+
+
+
+
         </div>
     </div>
 </div>
